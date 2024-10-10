@@ -1,0 +1,50 @@
+/* estilos.css */
+
+/* Fonte personalizada */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #E6F8FE; /* Cor de fundo do corpo */
+}
+
+/* Cores da Connect Line */
+.bg-primary {
+    background-color: #2F8F98 !important; /* Cor primária */
+}
+
+.btn-primary {
+    background-color: #2F8F98 !important;
+    border-color: #2F8F98 !important;
+}
+
+.btn-primary:hover {
+    background-color: #1E6B72 !important;
+    border-color: #1A5A60 !important;
+}
+
+/* Personalizações adicionais */
+header h1, header h2 {
+    color: #FFFFFF !important; /* Título e subtítulo em branco */
+}
+
+.resultado {
+    background-color: #FFFFFF !important; /* Fundo branco para a área de resultados */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.alerta {
+    color: #dc3545 !important; /* Vermelho para alertas */
+    font-weight: bold;
+}
+
+/* Responsividade adicional */
+@media (max-width: 576px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header h2 {
+        font-size: 1.2rem;
+    }
+}

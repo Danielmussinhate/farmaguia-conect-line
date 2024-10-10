@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Line Farmaguia</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        /* Estilos inline para garantir que as cores sejam aplicadas corretamente */
+
+        /* Fundo do corpo */
+        body {
+            background-color: #E6F8FE !important;
+            font-family: 'Roboto', sans-serif !important;
+        }
+
+        /* Cor do cabeçalho e botões */
+        .bg-primary {
+            background-color: #2F8F98 !important;
+        }
+
+        .text-white {
+            color: #FFFFFF !important;
+        }
+
+        /* Botões */
+        .btn-primary {
+            background-color: #2F8F98 !important;
+            border-color: #2F8F98 !important;
+        }
+
+        .btn-primary:hover {
+            background-color: #1E6B72 !important;
+            border-color: #1A5A60 !important;
+        }
+
+        /* Estilo para títulos e subtítulos no header */
+        header h1, header h2 {
+            color: #FFFFFF !important;
+        }
+
+        /* Fundo e estilo da área de resultado */
+        .resultado {
+            background-color: #FFFFFF !important;
+            padding: 20px !important;
+            border-radius: 5px !important;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        /* Alerta em vermelho */
+        .alerta {
+            color: #dc3545 !important;
+            font-weight: bold !important;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Connect Line Farmaguia</h1>
+        <h2>Guia de Dosagem Interativo</h2>
+    </header>
+
+    <main class="container my-5">
+        <section class="selection">
+            <h3>Selecione as opções abaixo:</h3>
+            <form id="doseForm">
+                <div class="mb-3">
+                    <label for="medicamento" class="form-label">Medicamento</label>
+                    <select class="form-select" id="medicamento" required>
+                        <option value="" disabled selected>Escolha um medicamento</option>
+                        <option value="dipirona">Dipirona</option>
+                        <option value="paracetamol">Paracetamol</option>
+                        <option value="ibuprofeno">Ibuprofeno</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="idade" class="form-label">Idade</label>
+                    <select class="form-select" id="idade" required>
+                        <option value="" disabled selected>Escolha a idade</option>
+                        <option value="neonatal">Neonatal</option>
+                        <option value="pediatrica">Pediátrica</option>
+                        <option value="adolescente">Adolescente</option>
+                        <option value="adulto">Adulto</option>
+                    </select>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="via" class="form-label">Via de Administração</label>
+                    <select class="form-select" id="via" required>
+                        <option value="" disabled selected>Escolha a via de administração</option>
+                        <option value="oral">Oral</option>
+                        <option value="retal">Retal</option>
+                        <option value="injetavel">Injetável</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="apresentacao" class="form-label">Apresentação</label>
+                    <select class="form-select" id="apresentacao" required>
+                        <option value="" disabled selected>Escolha a apresentação</option>
+                    </select>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="peso" class="form-label">Peso (kg)</label>
+                    <input type="number" class="form-control" id="peso" placeholder="Digite o peso em kg" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Calcular Dose</button>
+            </form>
+        </section>
+        
+        <section class="resultado mt-5" id="resultado" style="display: none;">
+            <h3>Resultado:</h3>
+            <div id="doseInfo" class="p-3 bg-white rounded shadow-sm"></div>
+            <div id="alertas" class="mt-3"></div>
+        </section>
+    </main>
+
+    <footer class="bg-light text-center py-3">
+        <p>© 2024 Connect Line Farmaguia. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript Personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>
